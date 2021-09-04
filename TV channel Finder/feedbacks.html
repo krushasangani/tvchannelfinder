@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Feedbacks</title>
+    <style type="text/css">
+      #logo{
+        font-size: 27px;
+        font-family: inherit;
+        color: #fc1919;
+      }
+      body{
+      }
+      .nav-link{
+        color: #fc1919;
+        color: #007bff;
+        color: #17a2b8;
+      }
+      .rating {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center
+      }
+
+      .rating>input {
+          display: none
+      }
+      .rating>label {
+          position: relative;
+          width: 1em;
+          font-size: 4vw;
+          color: #FFD600;
+          cursor: pointer
+      }
+
+      .rating>label::before {
+          content: "\2605";
+          position: absolute;
+          opacity: 0
+      }
+
+      .rating>label:hover:before,
+      .rating>label:hover~label:before {
+          opacity: 1 !important
+      }
+
+      .rating>input:checked~label:before {
+          opacity: 1
+      }
+
+      .rating:hover>input:checked~label:before {
+          opacity: 0.4
+      }
+      #star,
+      p {
+          text-align: center
+      }
+      @media only screen and (max-width: 600px) {
+          #star {
+              font-size: 14px
+          }
+
+          p {
+              font-size: 12px
+          }
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container-sm">
+    
+      <!-- Logo and Search box -->
+      <nav class="navbar navbar-white bg-white">
+        <a class="navbar-brand" href="tv.jpg" id="logo">
+          <img src="tv1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Channel Finder
+        </a>
+          
+
+      </nav>
+
+      
+      <!-- Menu Bar -->
+      <nav class="navbar navbar-expand-sm bg-white navbar-white">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Set Top Boxes
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://www.tatasky.com/cms-assets/compliances/files/2020-04/Channel%2BList_20200402.pdf">Tata Sky</a>
+              <a class="dropdown-item" href="https://assets.airtel.in/static-assets/cms/Channel_List_Detel_06032020.pdf">Airtel</a>
+              <a class="dropdown-item" href="https://www.dishtv.in/Pages/channel-number-list.aspx">Dish TV</a>
+              <a class="dropdown-item" href="https://www.d2h.com/download/D2H_LCN_6thOct.pdf">Videocon</a>
+              <a class="dropdown-item" href="https://www.sundirect.in/content/uploads/documents/consumer_corner/a-la-carte_pay_channels.pdf">Sun Direct</a>
+              <a class="dropdown-item" href="https://www.gtpl.net/uploads/editor/files/5e00b248ad7cc.pdf">GTPL</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+
+          
+        </ul>
+      </nav>
+
+
+
+      <h3 style="text-align: center;">Feedbacks</h3>
+
+      <div>
+        <div>How do you like our website?</div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Very Bad</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Somewhat Bad</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Neither Good Nor Bad</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+          <label class="form-check-label" for="inlineRadio4">Somewhat Good</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+          <label class="form-check-label" for="inlineRadio5">Very Good</label>
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Leave a Review</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+
+
+      <br/>
+      <div id="star" style="font-size:20px">Star Rating</div>
+        <div class="rating"> 
+          <input type="radio" name="rating" value="5" id="5">
+          <label for="5">☆</label> 
+          <input type="radio" name="rating" value="4" id="4">
+          <label for="4">☆</label> 
+          <input type="radio" name="rating" value="3" id="3">
+          <label for="3">☆</label> 
+          <input type="radio" name="rating" value="2" id="2">
+          <label for="2">☆</label> 
+          <input type="radio" name="rating" value="1" id="1">
+          <label for="1">☆</label>
+        </div>
+
+        <div class="card border-info mb-3" style="max-width: 100vw">
+          <div class="card-header" style="font-size: 20px;">Reviews</div>
+            <div class="card-body text-info">
+            <h6 class="card-title">loremipsum@dolor.sit</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card border-info mb-3" style="max-width: 100vw">
+            <div class="card-body text-info">
+            <h6 class="card-title">loremipsum@dolor.sit</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card border-info mb-3" style="max-width: 100vw">
+            <div class="card-body text-info">
+            <h6 class="card-title">loremipsum@dolor.sit</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card border-info mb-3" style="max-width: 100vw">
+            <div class="card-body text-info">
+            <h6 class="card-title">loremipsum@dolor.sit</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card border-info mb-3" style="max-width: 100vw">
+            <div class="card-body text-info">
+            <h6 class="card-title">loremipsum@dolor.sit</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+
+
+
+
+
+
+        <hr/>
+        <!-- A vertical navbar -->
+        <div>
+          <nav class="navbar bg-white">
+          <!-- Links -->
+          
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedbacks.html">Feedbacks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="terms.html">Terms & Conditions</a>
+            </li>
+          </ul>
+        </nav>
+        <div style="font-size: 10px; text-align: center;">
+          *Content is subject to change without Notifications
+        </div><hr/>
+        <div style="font-size: 13px; text-align: center;">
+          Copyright 2005-2021.
+        </div><hr/>
+        </div>
+
+      
+
+
+
+
+
+    </div>
+
+      
+    
+    
+    
+
+    
+
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
